@@ -5,12 +5,12 @@ for pair in pairs_list:
     if pair not in unique:
         unique.append(tuple(pair))
 print(unique)
-n = int(input("Vvedi chislo"))
+n = int(input("Введи число"))
 count = 0
 sum = 0
-for i in range(len(pairs_list)):
-    for j in range(len(pairs_list[i])):
-        sum += pairs_list[i][j]
+for i in pairs_list:
+    for j in i:
+        sum += j
     if sum < n:
         count += 1
 print(count)
